@@ -1,4 +1,4 @@
-/* define offial THIS colours */
+/* define official THIS colours */
 :root {
     --this-dark-grey: rgb(83, 86, 90);
     --this-light-grey: rgb(200, 201, 199);
@@ -12,56 +12,169 @@
 }
 
 /* Place your CSS here */
-.Skin #Buttons #NextButton {
-	background-color: var(--this-light-grey);
+
+.youranswerblock {
+    float: left;
+    width: 49%;
+    border: 2px solid var(--this-light-grey);
+}
+
+.youranswer {
+    background-color: var(--this-light-grey);
+    float: left;
+    width: 100px;
+    min-height: 60px;
+    padding: 2px;
+}
+.youranswertext {
+    float: left;
+    padding: 2px;
+}
+
+.correctanswerblock {
+    float: left;
+    width: 49%;
+    border: 2px solid var(--this-light-grey);
+}
+
+.correctanswer {
+    background-color: var(--this-light-grey);
+    float: left;
+    width: 100px;
+    min-height: 60px;
+    padding: 2px;
+}
+
+.correctanswertext {
+    float: left;
+    padding: 2px;
 }
 
 .NextButton {
-    border: none;
-    color: var(--this-dark-grey);
-    padding: 15px 32px;
+    border: 2px solid;
+    border-color: var(--this-pale-blue);
+    border-radius: 300px;
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: small;
+    transition: all 150ms linear;
+}
+
+.NextButton:hover {
+    color: white;
+    background-color: var(--this-pale-blue);
+}
+
+.PreviousButton {
+    border: 2px solid;
+    border-color: var(--this-pale-blue);
+    border-radius: 300px;
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: small;
+    transition: all 150ms linear;
+}
+
+.PreviousButton:hover {
+    color: white;
+    background-color: var(--this-pale-blue);
 }
 
 .nextPageButton {
-    background-color: var(--this-pale-blue);
-    border: none;
-    color: var(--this-dark-grey);
-    padding: 15px 32px;
+    border: 2px solid;
+    border-color: var(--this-pale-blue);
+    border-radius: 300px;
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: small;
+    transition: all 150ms linear;
+}
+
+.nextPageButton:hover {
+    color: white;
+    background-color: var(--this-pale-blue);
 }
 
 .previousPageButton {
-    background-color: var(--this-pale-blue);
-    border: none;
-    color: var(--this-dark-grey);
-    padding: 15px 32px;
+    border: 2px solid;
+    border-color: var(--this-pale-blue);
+    border-radius: 300px;
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: small;
+    transition: all 150ms linear;
 }
 
+.previousPageButton:hover {
+    color: white;
+    background-color: var(--this-pale-blue);
+}
 /* this next lot overrides Qualtrics defaults */
+
+.QuestionBody img {
+    height: 300px !important;
+}
+
+.Skin button, .Skin input {
+    font-size: small;
+}
+
+.Skin .TE .ML textarea {
+    height: 2.5em;
+}
+
+.Skin #Buttons {
+    margin-top: 0;
+}
+
+.Skin .QuestionText {
+    font-size: small;
+    padding: 10px 10px 0px 10px;
+}
+
+.Skin .QuestionBody {
+    font-size: small;
+    padding-bottom: 0;
+}
+
 .Skin .SkinInner {
     padding-top: 0;
 }
 
 .Skin #Plug {
     text-align: center;
-    color: crimson;
     font-size: smaller;
     background-color: var(--this-light-grey);
 }
 
+.Skin #Plug a {
+    color: var(--this-dark-grey);
+}
+
 .Skin #PushStickyFooter {
     height: 0;
+}
+
+/*  validation error text */
+.Skin .ValidationError {
+    text-align: left;
+    padding: 10px 0px 5px 10px;
 }
 
 #ProgressBar {
@@ -71,21 +184,47 @@
 /* end of Qualtrics overrides */
 
 #THISlogo {
-     height: 20px;
+    height: 40px !important;
+}
+
+#LogoLine {
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0.1em;
+    border-style: solid;
+    color: var(--this-pale-blue);
+    float: none;
+}
+
+.progress {
+    float: right;
+    background-color: hotpink;
 }
 
 /* Style the tab */
+
+.tabContent {
+
+}
+
 .mytab {
     overflow: hidden;
-    border: 1px solid var(--this-dark-grey);
+    /* border-bottom: 2px solid var(--this-pale-blue); */
+    padding-left: 10px;
     background-color: var(--this-light-grey);
 }
 
 /* Style the buttons inside the tab */
 .mytab button {
-    background-color: inherit;
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    background: inherit;
     float: left;
-    border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
@@ -95,12 +234,15 @@
 
 /* Change background color of buttons on hover */
 .mytab button:hover {
-    background-color: var(--this-red);
+    color: var(--this-pale-blue);
 }
 
 /* Create an active/current tablink class */
 .mytab button.active {
-    background-color: var(--this-green);
+    background-color: white;
+    border-top: 5px solid var(--this-pale-blue);
+    border-right: 0px solid var(--this-pale-blue);
+    border-left: 0px solid var(--this-pale-blue);
 }
 
 /* Create an active/current tablink class */
@@ -122,6 +264,7 @@
     right: 0;
     top: 0;
 }
+
 #Clock {
   padding: .5em 1em;
   border: 1px solid #4CAF50;
