@@ -82,7 +82,11 @@ function showTab(event, divId) {
     var divClasses = currentDiv.className;
     var questionSection = (divClasses.indexOf("ctgCaseQuestion") >= 0);
 
+    console.log("divId:" + divId);
+    console.log("questionsecton:" + questionSection);
+
     if (questionSection){
+        console.log("hiding next/prev")
         hideButton("NextButton");
         hideButton("PreviousButton");
     } else {
