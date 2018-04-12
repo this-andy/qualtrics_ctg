@@ -176,7 +176,7 @@ function createDivForQuestions(divId, questionsDiv, startAtIndex, questionCount,
     for (i = 0; i < errorDivs.length; i++) {
 		// console.log(i + ' : ' + errorDivs[i].id+ ' : ' + errorDivs[i].textContent);
 		if (errorDivs[i].textContent !== "") {
-			selectedTab.textContent += " *";
+			// selectedTab.textContent += " *";
 			if (selectedTab.className.indexOf("tabWithErrors") === -1) {
         		selectedTab.className += ' tabWithErrors'
     		}
@@ -224,7 +224,7 @@ function addNextPrevTabButtons() {
     newButton.type = 'button';
     newButton.id = 'NextTabButton';
     newButton.className = "NextButton";
-    newButton.value = "Next → (TAB)";
+    newButton.value = "Next →";
     newButton.onclick = function(){showNextTab()};
     buttonsDiv.insertBefore(newButton, buttonsDiv.childNodes[1]);
 
@@ -232,7 +232,7 @@ function addNextPrevTabButtons() {
     newButton.type = 'button';
     newButton.id = 'PreviousTabButton';
     newButton.className = "PreviousButton";
-    newButton.value = "← Back (TAB)";
+    newButton.value = "← Back";
     newButton.onclick = function(){showPreviousTab()};
     buttonsDiv.insertBefore(newButton, buttonsDiv.childNodes[0]);
 }
